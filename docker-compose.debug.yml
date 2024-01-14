@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  copytrade:
+    image: copytrade
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - configuration=Debug
+    environment:
+      - SourceApiKey=jeH1iVcORASEc8sEQI0SfkloXSeGrC4j2n166Jxhhnq0QckgAvd1DilWQodqC4rD # thestar
+      - SourceApiSecret=xSRaScsZfxOlgOFgpuwH4gbreRhL6Ymthavpfo0cyzhO7YwF1LgrA6RnqMsUer03
+      - CopyApiKey=J8UtUS73XuiKFu16kK1GCLEk1duauoDr3w0pGUefv0HE9vumNmGuGCcVXThyMidp # cuongdm
+      - CopyApiSecret=ZDgCprYjnEBgYDkQ5hLRyEDvXHPYWGVKeKe8TgppvKVbcCmFb7aBpL5JQKhpBCbe
+      - TelegramBotToken=5362406949:AAFAvl3dorn98NTnFCI1rc5M1jsMyfPzlmQ
+      - TelegramAlertChannelId=-1002036731123
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw

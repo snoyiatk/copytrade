@@ -1,0 +1,16 @@
+
+version: '3.4'
+
+services:
+  copytrade:
+    image: copytrade
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - SourceApiKey= #yong
+      - SourceApiSecret=
+      - CopyApiKey=401zCH66AX9lFyvYNfWgsTKpw6k0ZB2e5TzimtVTEPsBguQL2ifdlpeBXfYwcdtS # thestar
+      - CopyApiSecret=QL7MIUCqNBHzXxZzhVtrG8v4RXiAnYXE9L56uKUfB41hYEAJSRg8R1JNCDx8OKzu
+      - TelegramBotToken=5362406949:AAFAvl3dorn98NTnFCI1rc5M1jsMyfPzlmQ
+      - TelegramAlertChannelId=-1002036731123
